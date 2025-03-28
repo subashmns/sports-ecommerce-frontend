@@ -1,0 +1,105 @@
+/* BannerCarousel.css */
+
+/* Ensure the carousel item has a higher stacking order */
+.carousel-item-animation {
+    position: relative;
+    animation: fadeInUp 1.5s ease-out, slideIn 1s ease-out;
+  }
+  
+  /* Set text captions on top */
+  .carousel-item .carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10;  /* Ensure it's above the image */
+    color: white;
+    animation: slideUp 1.2s ease-out;
+    opacity: 1;
+  }
+  
+  /* Image hover animation */
+  .image-animation {
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+  }
+  
+  .image-animation:hover {
+    transform: scale(1.1) rotate(5deg);
+    filter: brightness(1.1);
+  }
+  
+  /* Caption Text Fade-in animation */
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Keyframe for typing effect on the h5 text */
+  @keyframes typing {
+    from {
+      width: 0;
+      overflow: hidden;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* Typing effect */
+  .caption-animation h5 {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 2s steps(30) 1s 1 normal both;
+  }
+  
+  /* Fade-in effect for the paragraph text */
+  @keyframes fadeInText {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .caption-animation p {
+    animation: fadeInText 2s ease-in-out 1s forwards;
+  }
+  
+  /* Carousel Caption Color Animation */
+  .caption-animation h5:hover,
+  .caption-animation p:hover {
+    color: #ff7e5f;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* Image Zoom Effect */
+  .carousel-item img {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .carousel-item:hover img {
+    transform: scale(1.15);
+    transition: all 0.3s ease-in-out;
+    animation: zoomEffect 0.5s ease-out;
+  }
+  
+  @keyframes zoomEffect {
+    0% {
+      transform: scale(1.05);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1.15);
+    }
+  }
+  

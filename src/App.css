@@ -1,0 +1,93 @@
+/* SportsEcommerce.css */
+
+/* Navbar Hover Effect */
+.navbar-custom .nav-link {
+    position: relative;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-custom .nav-link:hover {
+    color: #ff7e5f;
+    text-decoration: none;
+  }
+  
+  .navbar-custom .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #ff7e5f;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-custom .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  /* Banner Image Animation */
+  .banner-img {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .banner-img:hover {
+    transform: scale(1.1);
+  }
+  
+  .banner-caption h3 {
+    animation: slideIn 1s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Product Card Hover Effect */
+  .product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-card img {
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Product Button Hover */
+  .product-btn {
+    background-color: #ff7e5f;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .product-btn:hover {
+    background-color: #ff5e3a;
+  }
+  
+  /* Footer */
+  .footer-custom {
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  

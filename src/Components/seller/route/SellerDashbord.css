@@ -1,0 +1,82 @@
+/* SellerDashboard.css */
+
+/* Sidebar */
+.sidebar {
+    background-color: #001529;
+    transition: all 0.3s ease;
+}
+
+.sidebar .logo {
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Content */
+.dashboard-content {
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hover Effect for Menu */
+.ant-menu-item:hover {
+    background-color: #1890ff;
+    color: #fff !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply fade-in animation to all dashboard content */
+.dashboard-content {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Content styling */
+.ant-layout-content {
+    background-color: #f0f2f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .ant-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+
+    .ant-layout-content {
+        padding: 16px;
+    }
+}
+
+.add-product{
+    margin: 0;
+    margin-left: 16rem;
+}
+
+.sidebar {
+    position: sticky;
+    top: 0; /* Ensures the sidebar sticks at the top of the viewport */
+    height: 100vh; /* Occupies full vertical height */
+    z-index: 10; /* Keeps it above other elements */
+    overflow-y: auto; /* Allows scrolling if the menu items exceed the height */
+    background-color: #001529; /* Default Ant Design dark theme background */
+}

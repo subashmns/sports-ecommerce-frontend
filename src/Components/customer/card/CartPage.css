@@ -1,0 +1,29 @@
+/* CartPage.css */
+.cart-page {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.cart-item {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.cart-item-image {
+    max-width: 100px;
+    object-fit: cover;
+}
+
+.cart-total {
+    border-top: 2px solid #ddd;
+    padding-top: 20px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.quantity-input {
+    max-width: 100px;
+    margin-top: 10px;
+}

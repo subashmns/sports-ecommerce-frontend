@@ -4,17 +4,14 @@ import Cards from './card/Cards';
 import { CartContext } from './card/cartContext';
 
 const FetchCustomerApi = () => {
-  const [setData, setIn] = useState([]);
+  const [data, setData] = useState([]);  // Change state variable to 'data'
   const { search } = useContext(CartContext);
-
-  
 
   const fetching = async () => {
     try {
-      const response = await axios.get(
-        'https://sports-ecommerce-backend-phi.vercel.app/products'
-      );
-      setIn(response.data);
+      const response = await axios.get('https://sports-ecommerce-backend-phi.vercel.app/products');
+      console.log("API Response: ", response.data);
+      setData(response.data);
     } catch (err) {
       console.error(err);
     }
@@ -24,7 +21,7 @@ const FetchCustomerApi = () => {
     fetching();
   }, []);
 
-  const filtering = setData.filter((product) => {
+  const filtering = data.filter((product) => {  // Use 'data' here
     const matchesSearch =
       search.toLowerCase() === ''
         ? product
@@ -34,7 +31,7 @@ const FetchCustomerApi = () => {
 
   return (
     <>
-      {setData.length === 0 && <p>Loading...</p>}
+      {data.length === 0 && <p>Loading...</p>}  {/* Use 'data' for length check */}
       <div className="container-fluid mt-4">
         <div className="row g-4"> {/* Add gap between rows and columns */}
           {filtering.map((item) => (

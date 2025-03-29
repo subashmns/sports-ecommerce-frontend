@@ -14,7 +14,7 @@ const ProductList = () => {
     useEffect(() => {
         const fetchSellerData = async () => {
             try {
-                const productRes = await axios.get(`https://sports-ecommerce-backend-phi.vercel.app/seller/products/${sellerId}`);
+                const productRes = await axios.get(`https://sports-ecommerce-frontend-b6m8.vercel.app/seller/products/${sellerId}`);
                 setProducts(productRes.data.products);
 
                 const totalQuantity = productRes.data.products.reduce((sum, product) => sum + product.quantity, 0);
@@ -29,7 +29,7 @@ const ProductList = () => {
 
     const handleDelete = async (productId) => {
         try {
-            await axios.delete(`https://sports-ecommerce-backend-phi.vercel.app/seller/products/${sellerId}/${productId}`);
+            await axios.delete(`https://sports-ecommerce-frontend-b6m8.vercel.app/seller/products/${sellerId}/${productId}`);
             const updatedProducts = products.filter((product) => product._id !== productId);
             setProducts(updatedProducts);
 

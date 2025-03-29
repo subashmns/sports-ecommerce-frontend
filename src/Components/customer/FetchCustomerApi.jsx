@@ -9,7 +9,7 @@ const FetchCustomerApi = () => {
 
   const fetching = async () => {
     try {
-      const response = await axios.get('https://sports-ecommerce-backend-phi.vercel.app/products');
+      const response = await axios.get('https://sports-ecommerce-frontend-b6m8.vercel.app/products');
       console.log("API Response: ", response.data);
       setData(response.data);
     } catch (err) {

@@ -50,7 +50,7 @@ const Registration = () => {
 
       console.log("Payload being sent:", payload);
 
-      const response = await axios.post('https://sports-ecommerce-backend-phi.vercel.app/users/signup', payload, {
+      const response = await axios.post('https://sports-ecommerce-frontend-b6m8.vercel.app/users/signup', payload, {
         headers: {
           'Content-Type': 'application/json',
         },

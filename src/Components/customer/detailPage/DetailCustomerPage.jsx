@@ -18,7 +18,7 @@ const DetailCustomerPage = () => {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          `https://sports-ecommerce-backend-phi.vercel.app/products/${_id}`
+          `https://sports-ecommerce-frontend-b6m8.vercel.app/products/${_id}`
         );
         setDetails(response.data);
         setMainImage(response.data.images[0]);

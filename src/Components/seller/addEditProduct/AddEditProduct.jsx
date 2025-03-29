@@ -56,7 +56,7 @@ const AddProduct = () => {
                 images: imageURLs
             };
 
-            await axios.post('https://sports-ecommerce-backend-phi.vercel.app/seller/add', formData, {
+            await axios.post('https://sports-ecommerce-frontend-b6m8.vercel.app/seller/add', formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }

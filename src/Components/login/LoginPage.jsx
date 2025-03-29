@@ -26,7 +26,7 @@ const LoginPage = () => {
 
     try {
       const response = await axios.post(
-        'https://sports-ecommerce-backend-phi.vercel.app/users/login',
+        'https://sports-ecommerce-frontend-b6m8.vercel.app/users/login',
         formData
       );
       setSuccessMessage('Login successful!');
